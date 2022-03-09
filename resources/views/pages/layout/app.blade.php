@@ -12,10 +12,10 @@
 </head>
 <body>
     @include('pages.layout.includes.navbar')
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5 mb-5">
       @yield('contents')
     </div>
-
+    @include('layouts.includes._footer')
   <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
   <script src="{{ asset('js/my.js') }}" defer></script>
 

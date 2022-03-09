@@ -12,6 +12,7 @@ class SchooleventimagesController extends Controller
 
     public function update(Request $request,  $id)
     {
+        $request->validate(['image'=>'required']);
         $schooleventimages = schooleventimages::find($id)->first();
         $path = public_path("storage\\" . $schooleventimages->image);
         if ($request->hasFile('image')) {
@@ -23,11 +24,11 @@ class SchooleventimagesController extends Controller
             $filename = $schooleventimages->image;
         }
 
-        $result = DB::table('schooleventimages')->where('id', $schooleventimages->id)->update([
+         DB::table('schooleventimages')->where('id', $schooleventimages->id)->update([
             'image' => $filename,
         ]);
 
-        return back();
+        return back()->withSuccessMessage($this->updated);
     }
 
     public function destroy($id)
@@ -38,6 +39,6 @@ class SchooleventimagesController extends Controller
             File::delete($path);
         }
         $schooleventimages->delete();
-        return back();
+        return back()->withSuccessMessage($this->deleted);
     }
 }

@@ -11,7 +11,8 @@
   <div id="layoutSidenav_content">
       <main class="mt-5 mb-5">
           <div class="container-fluid px-4">
-            
+            {{-- web content --}}
+            {{-- web content --}}
           </div>
       </main>
     @include('layouts.includes._footer')

@@ -235,6 +235,26 @@
   background-color: #65acf3;
 }
 
+.heading-line::before {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #0d6efd;
+}
+
+.heading-line::after {
+  content: "";
+  width: 15%;
+  padding-top: 0.5rem;
+  height: 1rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: #0d6efd;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

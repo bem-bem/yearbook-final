@@ -36,7 +36,11 @@
       @else
       <option selected disabled>Choose...</option>
       @endif
-      <option>test</option>
+      @forelse (yearlevel() as $item)
+          <option>{{ $item->name }}</option>
+      @empty
+
+      @endforelse
     </select>
     @if ($errors->has('yearlevel'))
         <span class="invalid-feedback">{{ $errors->first('yearlevel') }}</span>
@@ -51,7 +55,11 @@
       @else
       <option selected disabled>Choose...</option>
       @endif
-      <option>test</option>
+       @forelse (course() as $item)
+          <option>{{ $item->name }}</option>
+      @empty
+      
+      @endforelse
     </select>
     @if ($errors->has('course'))
         <span class="invalid-feedback">{{ $errors->first('course') }}</span>
@@ -66,7 +74,11 @@
       @else
       <option selected disabled>Choose...</option>
       @endif
-      <option>test</option>
+      @forelse (section() as $item)
+      <option>{{ $item->name }}</option>
+  @empty
+  
+  @endforelse
     </select>
     @if ($errors->has('section'))
         <span class="invalid-feedback">{{ $errors->first('section') }}</span>

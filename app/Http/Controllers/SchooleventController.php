@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\schoolevent;
+use App\Models\schooleventimages;
 use App\Http\Requests\schooleventRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class SchooleventController extends Controller
 {
@@ -12,10 +15,11 @@ class SchooleventController extends Controller
     {
         $this->modelName = new schoolevent();
     }
- 
+
     public function index()
     {
-        return view('schoolEvents.table' , ['schoolevent' => schoolevent::all()]);
+        $this->alert();
+        return view('schoolEvents.table', ['schoolevent' => schoolevent::all()]);
     }
 
     public function create()
@@ -29,30 +33,42 @@ class SchooleventController extends Controller
         $data = $this->modelName::create($validated);
         if ($request->hasFile('image')) {
             foreach ($request->file('image') as $files) {
-                    $image =  $files->store('schoolevents');
-                    DB::table('schooleventimages')->insert([
-                        'schoolevent_id' => $data['id'],
-                        'image' => $image,
-                    ]);
+                $image =  $files->store('schoolevents');
+                DB::table('schooleventimages')->insert([
+                    'schoolevent_id' => $data['id'],
+                    'image' => $image,
+                ]);
             }
         }
-        return back();
+        return redirect()->route('schoolevent.edit' , [$data['id']])->withSuccessMessage($this->created);
     }
 
     public function edit(schoolevent $schoolevent)
     {
-        return view('schoolEvents.form.update' , compact('schoolevent'));
+        $this->alert();
+        return view('schoolEvents.form.update', compact('schoolevent'));
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     $data = schoolevent::find($id)->first();
-    //     dd($data);
-    //     schoolevent::where('id',$data)->update(['title'=>  input('title')]);
-    // }
+    public function update(Request $request, schoolevent $schoolevent)
+    {
+        $validated = $request->validate(['title'=>'required']);
+        $schoolevent->fill($validated);
+        $schoolevent->save();
+        return back()->withSuccessMessage($this->updated);
+    }
 
     public function destroy(schoolevent $schoolevent)
     {
-        //
+        $images = schooleventimages::where("schoolevent_id", $schoolevent->id)->get();
+
+        foreach ($images as $item) {
+            if (File::exists(public_path("storage\\" . $item->image))) {
+                File::delete(public_path("storage\\" . $item->image));
+            }
+        }
+
+        schooleventimages::where('id', $schoolevent->id)->delete();
+        schoolevent::where('id', $schoolevent->id)->delete();
+        return redirect()->route('schoolevent.index')->withSuccessMessage($this->deleted);
     }
 }

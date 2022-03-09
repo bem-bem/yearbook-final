@@ -8,4 +8,10 @@ function showPreview(event){
       }
   }
 
-  
+  //select all checkbox to delete
+document.getElementById('select-all').onclick = function() {
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for (let checkbox of checkboxes) {
+      checkbox.checked = this.checked;
+  }
+}

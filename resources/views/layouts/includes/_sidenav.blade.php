@@ -16,7 +16,9 @@
           </a>
           <div class="collapse" id="category" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav fs-6">
-                {{-- @links(['href' => route('student.index')]) students @endlinks --}}
+                @links(['href' => route('yearlevel.index')]) yearlevel @endlinks
+                @links(['href' => route('course.index')]) course @endlinks
+                @links(['href' => route('section.index')]) section @endlinks
               </nav>
           </div>
 

@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class schoolevent extends Model
 {
     use HasFactory;
-    protected $fillable =
-    [
-         'title'
-    ];
+    protected $fillable = ['title'];
   
     public function schoolEventImages()
     {
