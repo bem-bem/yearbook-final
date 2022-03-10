@@ -46,6 +46,15 @@ Route::prefix('page')->controller(LoginController::class)->group(function () {
     Route::get('/', [PagesController::class, 'welcome'])->name('/');
     Route::get('students', [PagesController::class, 'students'])->name('students');
     Route::get('students/{id}', [PagesController::class, 'select_student'])->name('select_student');
+    Route::get('facultys', [PagesController::class, 'facultys'])->name('facultys');
+    Route::get('facultys/{id}', [PagesController::class, 'select_faculty'])->name('select_faculty');
+    Route::get('classphoto', [PagesController::class, 'classphoto'])->name('classphoto');
+    Route::get('classphoto/{id}', [PagesController::class, 'select_classphoto'])->name('select_classphoto');
 
     Route::get('student_name', [Search::class, 'student_name'])->name('student_name');
+    Route::get('faculty_name', [Search::class, 'faculty_name'])->name('faculty_name');
+    Route::get('section', [Search::class, 'section'])->name('section');
+    Route::get('course', [Search::class, 'course'])->name('course');
+    Route::get('yearlevel', [Search::class, 'yearlevel'])->name('yearlevel');
+
 });

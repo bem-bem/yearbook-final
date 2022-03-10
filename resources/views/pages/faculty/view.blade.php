@@ -3,21 +3,20 @@
 @section('contents')
       {{-- heading to all images --}}
       <div class="row justify-content-between">
-        <div class="col-lg-9">@include('pages.students._filter')</div>
         <div class="col-lg-3">
-          <form action="{{ route('student_name') }}" method="get">
+          <form action="{{ route('faculty_name') }}" method="get">
             @include('pages._search')
           </form>
         </div>
         <div class="heading-line"></div>
-        <p class="text-center display-5 fw-bold">Students</p>
+        <p class="text-center display-5 fw-bold">Facultys</p>
       </div>
 
       {{-- images --}}
       <div class="row">
         @forelse ($data as $item)
-            <div class="col-lg-3">
-           <a href="{{ route('select_student', [$item->id]) }}">
+            <div class="col-lg-3 mb-4">
+           <a href="{{ route('select_faculty', [$item->id]) }}">
             <div class="card shadow">
               <div class="card-body">
                 @img(['src' => $item->image]) @endimg

@@ -24,6 +24,8 @@
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
               <li><a class="dropdown-item" href="#"></a></li>
               <li><a class="dropdown-item" href="{{ route('students') }}">Students</a></li>
+              <li><a class="dropdown-item" href="{{ route('facultys') }}">facultys</a></li>
+              <li><a class="dropdown-item" href="{{ route('classphoto') }}">classphoto</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -36,8 +38,8 @@
             @endif
         <form class="d-flex" action="{{ route('student_name') }}" method="get">
           {{-- @csrf --}}
-          <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+         
+         
         </form>
       </div>
     </div>

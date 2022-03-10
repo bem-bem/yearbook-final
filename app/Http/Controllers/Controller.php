@@ -14,12 +14,17 @@ class Controller extends BaseController
     public $updated = 'Updated Succesfully';
     public $created = 'Created Succesfully';
     public $deleted = 'Deleted Succesfully';
+    public $info = 'No Result Found';
 
     public function alert()
     {
         if (session('success_message')) {
             Alert::success('SUCCESS', session('success_message'));
+        }elseif (session()->has($this->info)) {
+            alert()->info(session()->get($this->info , $this->info));
         }
+        // if (session()->has($this->info)) {
+        //     Alert::toast(session()->get($this->info), $this->info);
         return;
     }
 
