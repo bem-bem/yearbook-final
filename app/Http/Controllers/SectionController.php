@@ -16,7 +16,7 @@ class SectionController extends Controller
     public function index()
     {
         $this->alert();
-        return view('category.section.table' , ['data' => $this->modelName::all()]);
+        return view('category.section.table' , ['data' => $this->modelName::simplePaginate(10)]);
     }
 
     public function create()

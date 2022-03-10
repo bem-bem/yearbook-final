@@ -4,22 +4,52 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Models\schoolevent;
-use App\Models\schooleventimages;
+use App\Models\student;
+use App\Models\faculty;
 
 class DeleteAllController extends Controller
 {
-    // public function event_images(Request $request , $id)
-    // {
-    //     $schoolevent = schoolevent::findOrFail($id)->first();
-    //     $images = schooleventimages::where("schoolevent_id", $schoolevent->id)->get();
+    public function delete_student(Request $request)
+    {
+        $ids = $request->input('ids');
+        if (!empty($ids)) {
+            foreach ($ids as $images) {
+                $s_id = student::find($images);
+                $path = public_path("storage\\" . $s_id->image);
+                if (File::exists($path)) {
+                    File::delete($path);
+                }
+                $result = student::whereIn('id' , $s_id)->delete();
+            }
+            if ($result) {
+                return redirect()->back()->with('success', 'success');
+            } else {
+                return redirect()->back()->with('error', 'error');
+            }
+        } else {
+            return redirect()->back()->with('error', 'error');
+        }
+    }
 
-    //     foreach ($images as $item) {
-    //         if (File::exists(public_path("storage\\" . $item->image))) {
-    //             File::delete(public_path("storage\\" . $item->image));
-    //         }
-    //     }
-
-    //     return back();
-    // }
+    public function delete_faculty(Request $request)
+    {
+        $ids = $request->input('ids');
+        if (!empty($ids)) {
+            foreach ($ids as $images) {
+                $s_id = faculty::find($images);
+                $path = public_path("storage\\" . $s_id->image);
+                if (File::exists($path)) {
+                    File::delete($path);
+                }
+                $result = faculty::whereIn('id' , $s_id)->delete();
+            }
+            if ($result) {
+                return redirect()->back()->with('success', 'success');
+            } else {
+                return redirect()->back()->with('error', 'error');
+            }
+        } else {
+            return redirect()->back()->with('error', 'error');
+        }
+    }
 }

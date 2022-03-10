@@ -16,6 +16,10 @@ class FacultyController extends Controller
     public function index()
     {
         $this->alert();
+        if (isset($_GET['name'])) {
+            $faculty = $this->modelName::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
+                 return view('facultys.table', ['faculty' => $faculty]);
+        }
         return view('facultys.table' , ['faculty'=>$this->modelName::simplePaginate(10)]);
     }
 

@@ -13,26 +13,12 @@
             </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li>
-                <span style="cursor: pointer"  data-bs-toggle="modal" data-bs-target="#logout" class="dropdown-item" >Logout</span>
+                <form action="{{ route('logout_admin') }}" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Logout</button>
+                </form>
               </li>
           </ul>
       </li>
   </ul>
 </nav>
-
-
-<!-- Modal -->
-<div class="modal fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      
-      <div class="modal-body text-center">
-        <form action="{{ route('logout_admin') }}" method="post">
-          @csrf
-          @btnSubmit() @endbtnSubmit
-        </form>
-      </div>
-     
-    </div>
-  </div>
-</div>

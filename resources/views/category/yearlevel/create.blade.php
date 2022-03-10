@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Facultys')
+@section('title' , 'Create Yearlevel')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -19,7 +19,7 @@
                     <form action="{{ route('yearlevel.store') }}" method="post">
                       @csrf
                       @include('category.yearlevel._form')
-                    @btnSubmit() submit form @endbtnSubmit
+                      <button type="submit" class="btn btn-primary w-100">Submit Form</button>
                     </form>
                   </div>
                 </div>

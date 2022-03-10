@@ -6,9 +6,9 @@
   </button>
   <ul class="dropdown-menu">
     @forelse (section() as $item)
-        <form action="{{ route('section') }}" method="get">
+        <form action="{{ route('classphotos') }}" method="get">
           <li>
-            <input type="submit" value="{{ $item->name }}" name="search" class="dropdown-item">
+            <input type="submit" value="{{ $item->name }}" name="section" class="dropdown-item">
           </li>
          
         </form>
@@ -24,9 +24,9 @@
   </button>
   <ul class="dropdown-menu">
     @forelse (course() as $item)
-    <form action="{{ route('course') }}" method="get">
+    <form action="{{ route('classphotos') }}" method="get">
       <li>
-        <input type="submit" value="{{ $item->name }}" name="search" class="dropdown-item">
+        <input type="submit" value="{{ $item->name }}" name="course" class="dropdown-item">
       </li>
      
     </form>
@@ -42,9 +42,9 @@
   </button>
   <ul class="dropdown-menu">
     @forelse (yearlevel() as $item)
-        <form action="{{ route('yearlevel') }}" method="get">
+        <form action="{{ route('classphotos') }}" method="get">
           <li>
-            <input type="submit" value="{{ $item->name }}" name="search" class="dropdown-item">
+            <input type="submit" value="{{ $item->name }}" name="yearlevel" class="dropdown-item">
           </li>
          
         </form>

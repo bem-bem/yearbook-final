@@ -90,9 +90,3 @@
   </div>
 
 </div>
-
-<div class="row">
-  <div class="col-lg-12">
-    @btnSubmit() @endbtnSubmit
-  </div>
-</div>

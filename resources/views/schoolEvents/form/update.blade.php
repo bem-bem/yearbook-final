@@ -11,7 +11,7 @@
   <div id="layoutSidenav_content">
       <main class="mt-5 mb-5">
           <div class="container-fluid px-4">
-            {{-- category content  --}}
+            {{-- web content  --}}
               <div class="card shadow">
                 <div class="card-body">
 
@@ -21,7 +21,7 @@
                       <form action="{{ route('schoolevent.destroy', [$schoolevent->id]) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        @btnSubmit(['color' => 'danger']) DELETE THIS EVENT @endbtnSubmit
+                        <button class="btn btn-danger w-100" type="submit">DELETE THIS EVENT</button>
                       </form>
                     </div>
                   </div>
@@ -87,7 +87,7 @@
                             <form action="{{ route('schooleventimages.destroy', [$item->id]) }}" method="post">
                               @csrf
                               @method('DELETE')
-                              @btnSubmit(['color' => 'danger']) DELETE @endbtnSubmit
+                              <button class="btn btn-danger w-100" type="submit">DELETE</button>
                             </form>
                           </div>
                         </div>
@@ -99,7 +99,7 @@
 
                 </div>
               </div>
-            {{-- category content  --}}
+            {{-- web content  --}}
           </div>
       </main>
     @include('layouts.includes._footer')

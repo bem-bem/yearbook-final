@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Yearlevel category')
+@section('title' , 'Courses')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -20,13 +20,7 @@
                       <div class="card-body">
                         <div class="row justify-content-between">
                           <div class="col-lg-6">
-                            @btnCreate(['href' => route('course.create')]) @endbtnCreate()
-                          </div>
-                          <div class="col-lg-6">
-                            <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder="Recipient's username">
-                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                            </div>
+                            <h4 class="fs-5 fw-bold"> @btnCreate(['href' => route('course.create')]) @endbtnCreate Courses / Strands Table</h4>
                           </div>
                         </div>
                       </div>
@@ -36,7 +30,7 @@
                       <div class="card-body">
                         <div class="table-responsive">
                           <table class="table table-borderless table-hover">
-                            {{-- <caption>{{ $student->links() }}</caption> --}}
+                            <caption>{{ $data->links() }}</caption>
                             <thead class="table-primary">
                               <tr>
                                 <th scope="col">Name</th>

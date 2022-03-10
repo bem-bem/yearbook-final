@@ -18,17 +18,7 @@
 
                       {{-- i am still working on this --}}
                       <div class="card-body">
-                        <div class="row justify-content-between">
-                          <div class="col-md-4">
-                            @btnCreate(['href' => route('classphoto.create')]) @endbtnCreate()
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder="Recipient's username">
-                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                            </div>
-                          </div>
-                        </div>
+                        @include('classPhoto.form._header')
                       </div>
                       {{-- i am still working on this --}}
                     

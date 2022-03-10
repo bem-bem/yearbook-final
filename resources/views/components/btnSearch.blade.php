@@ -1,0 +1,1 @@
+<button class="btn btn-outline-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>

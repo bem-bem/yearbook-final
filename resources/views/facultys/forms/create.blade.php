@@ -19,6 +19,11 @@
                          <form action="{{ route('faculty.store') }}" method="post" enctype="multipart/form-data">
                           @csrf
                           @include('facultys.forms._form')
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <button type="submit" class="btn btn-primary w-100">Submit Form</button>
+                            </div>
+                          </div>
                         </form>
                       </div>
                     </div>

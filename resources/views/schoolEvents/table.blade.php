@@ -18,17 +18,7 @@
 
                       {{-- i am still working on this --}}
                       <div class="card-body">
-                        <div class="row justify-content-between">
-                          <div class="col-md-4">
-                            @btnCreate(['href' => route('schoolevent.create')]) @endbtnCreate()
-                          </div>
-                          <div class="col-md-4">
-                            <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder="Recipient's username">
-                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                            </div>
-                          </div>
-                        </div>
+                      @include('schoolEvents.form._header')
                       </div>
                       {{-- i am still working on this --}}
                     
@@ -36,12 +26,12 @@
                       <div class="card-body">
                         <div class="table-responsive">
                           <table class="table table-borderless table-hover">
-                            {{-- <caption>{{ $schoolevent->links() }}</caption> --}}
+                            <caption>{{ $schoolevent->links() }}</caption>
                             <thead class="table-primary">
                               <tr>
                                 <th scope="col">Title</th>
                                 <th scope="col">Date Created</th>
-                                <th scope="col">Modify</th>
+                                <th scope="col">Update</th>
                               </tr>
                             </thead>
                             <tbody>

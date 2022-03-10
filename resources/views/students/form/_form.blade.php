@@ -96,7 +96,7 @@
       <div class="form-check">
         <input class="form-check-input" type="checkbox" name="has_image" value="check" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
-          Has an image?
+          Check this if the image is required
         </label>
       </div>
       <input type="file" name="image" class="form-control {{ $errors->has('image') ? 'is-invalid':'' }}" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
@@ -140,8 +140,3 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    @btnSubmit() @endbtnSubmit
-  </div>
-</div>

@@ -16,9 +16,9 @@
           </a>
           <div class="collapse" id="category" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav fs-6">
-                @links(['href' => route('yearlevel.index')]) yearlevel @endlinks
-                @links(['href' => route('course.index')]) course @endlinks
-                @links(['href' => route('section.index')]) section @endlinks
+                <a href="{{ route('yearlevel.index') }}" class="nav-link">Yearlevel</a>
+                <a href="{{ route('course.index') }}" class="nav-link">Courses / Strands</a>
+                <a href="{{ route('section.index') }}" class="nav-link">Section / Blocks</a>
               </nav>
           </div>
 
@@ -30,21 +30,21 @@
           </a>
           <div class="collapse" id="album" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav fs-6">
-                @links(['href' => route('student.index')]) students @endlinks
-                @links(['href' => route('faculty.index')]) facultys @endlinks
+                <a href="{{ route('student.index') }}" class="nav-link">Students</a>
+                <a href="{{ route('faculty.index') }}" class="nav-link">Facultys</a>
               </nav>
           </div>
         
           <div class="sb-sidenav-menu-heading">Addons</div>
-          @links(['href' => route('classphoto.index')]) 
-          <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i></div>
-          Class photo
-          @endlinks
+          <a href="{{ route('classphoto.index') }}" class="nav-link">
+            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i></div>
+            Class photo
+        </a>
 
-          @links(['href' => route('schoolevent.index')]) 
-          <div class="sb-nav-link-icon"><i class="fas fa-calendar-check fa-lg"></i></div>
-          School events 
-          @endlinks
+        <a href="{{ route('schoolevent.index') }}" class="nav-link">
+            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i></div>
+            School events
+        </a>
          
       </div>
   </div>

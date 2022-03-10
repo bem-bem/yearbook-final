@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Facultys')
+@section('title' , 'Update yearlevel')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -20,7 +20,7 @@
                       @csrf
                       @method('PUT')
                       @include('category.yearlevel._form')
-                    @btnSubmit() update form @endbtnSubmit
+                      <button type="submit" class="btn btn-primary w-100">Save Change's</button>
                     </form>
                   </div>
                 </div>

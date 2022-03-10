@@ -15,7 +15,7 @@ class YearlevelController extends Controller
     public function index()
     {
         $this->alert();
-        return view('category.yearlevel.table' , ['data' => $this->modelName::all()]);
+        return view('category.yearlevel.table' , ['data' => $this->modelName::simplePaginate(10)]);
     }
 
     public function create()

@@ -27,7 +27,7 @@
           @endif
         </div>
         <div class="text-center">
-          @btnSubmit() Login @endbtnSubmit
+          <button type="submit" class="btn btn-primary w-100">Login</button>
         </div>
       </form>
     </div>

@@ -15,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::aliasComponent('components.img', 'img');
         Blade::aliasComponent('components.btnUpdate', 'btnUpdate');
         Blade::aliasComponent('components.btnDelete', 'btnDelete');
+        Blade::aliasComponent('components.btnSearch', 'btnSearch');
+        Blade::aliasComponent('components.cssWave', 'cssWave');
     }
 
     public function register()

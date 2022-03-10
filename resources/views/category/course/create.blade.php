@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Facultys')
+@section('title' , 'Create Course')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -19,7 +19,7 @@
                     <form action="{{ route('course.store') }}" method="post">
                       @csrf
                       @include('category.course._form')
-                    @btnSubmit() submit form @endbtnSubmit
+                      <button type="submit" class="btn btn-primary w-100">Submit Form</button>
                     </form>
                   </div>
                 </div>

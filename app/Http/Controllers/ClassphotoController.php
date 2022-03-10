@@ -16,7 +16,18 @@ class ClassphotoController extends Controller
     public function index()
     {
         $this->alert();
-        return view('classPhoto.table', ['classphoto' => $this->modelName::simplePaginate(10)]);
+        if (isset($_GET['section'])) {
+            $classphoto = $this->modelName::where('section', 'LIKE', '%' . $_GET['section'] . '%')->simplePaginate(3);
+                 return view('classphoto.table', ['classphoto' => $classphoto]);
+        }elseif (isset($_GET['course'])) {
+            $classphoto = $this->modelName::where('course', 'LIKE', '%' . $_GET['course'] . '%')->simplePaginate(3);
+                return view('classphoto.table', ['classphoto' => $classphoto]);
+        }elseif (isset($_GET['yearlevel'])) {
+            $classphoto = $this->modelName::where('yearlevel', 'LIKE', '%' . $_GET['yearlevel'] . '%')->simplePaginate(3);
+                return view('classphoto.table', ['classphoto' => $classphoto]);
+        }else{
+            return view('classphoto.table', ['classphoto' => $this->modelName::simplePaginate(10)]);
+        }
     }
 
     public function create()

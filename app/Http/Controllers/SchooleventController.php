@@ -11,15 +11,14 @@ use Illuminate\Support\Facades\File;
 
 class SchooleventController extends Controller
 {
-    public function __construct()
-    {
-        $this->modelName = new schoolevent();
-    }
-
     public function index()
     {
         $this->alert();
-        return view('schoolEvents.table', ['schoolevent' => schoolevent::all()]);
+        if (isset($_GET['title'])) {
+            $schoolevent = schoolevent::where('title', 'LIKE', '%' . $_GET['title'] . '%')->simplePaginate(3);
+                 return view('schoolEvents.table', ['schoolevent' => $schoolevent]);
+        }
+        return view('schoolEvents.table', ['schoolevent' => schoolevent::simplePaginate(10)]);
     }
 
     public function create()
@@ -30,7 +29,7 @@ class SchooleventController extends Controller
     public function store(schooleventRequest $request)
     {
         $validated = $request->validated();
-        $data = $this->modelName::create($validated);
+        $data = schoolevent::create($validated);
         if ($request->hasFile('image')) {
             foreach ($request->file('image') as $files) {
                 $image =  $files->store('schoolevents');

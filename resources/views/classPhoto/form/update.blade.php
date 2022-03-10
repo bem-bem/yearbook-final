@@ -20,6 +20,10 @@
                           @csrf
                           @method('PUT')
                           @include('classphoto.form._form')
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <button type="submit" class="btn btn-primary w-100">Save Change's</button>                            </div>
+                          </div>
                         </form>
                       </div>
                     </div>

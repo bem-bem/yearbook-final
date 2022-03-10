@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
 
-class FacultyScope implements Scope
+class LatestScope implements Scope
 {
-  public function apply(Builder $builder, Model $model)
-  {
-    $builder->orderBy('id', 'desc');
-  }
+    public function apply(Builder $builder, Model $model)
+    {
+        $builder->orderBy('id', 'desc');
+    }
 }

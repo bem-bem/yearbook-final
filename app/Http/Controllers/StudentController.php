@@ -16,7 +16,21 @@ class StudentController extends Controller
     public function index()
     {
         $this->alert();
-        return view('students.table', ['student' => $this->modelName::simplePaginate(10)]);
+        if (isset($_GET['name'])) {
+            $student = $this->modelName::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
+                 return view('students.table', ['student' => $student]);
+        }elseif (isset($_GET['section'])) {
+            $student = $this->modelName::where('section', 'LIKE', '%' . $_GET['section'] . '%')->simplePaginate(3);
+                return view('students.table', ['student' => $student]);
+        }elseif (isset($_GET['course'])) {
+            $student = $this->modelName::where('course', 'LIKE', '%' . $_GET['course'] . '%')->simplePaginate(3);
+                return view('students.table', ['student' => $student]);
+        }elseif (isset($_GET['yearlevel'])) {
+            $student = $this->modelName::where('yearlevel', 'LIKE', '%' . $_GET['yearlevel'] . '%')->simplePaginate(3);
+                return view('students.table', ['student' => $student]);
+        }else{
+            return view('students.table', ['student' => $this->modelName::simplePaginate(10)]);
+        }
     }
 
     public function create()
