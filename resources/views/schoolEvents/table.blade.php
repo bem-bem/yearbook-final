@@ -38,7 +38,7 @@
                               @forelse ($schoolevent as $item)
                                   <tr>
                                     <td>{{ $item->title }}</td>
-                                    <td>{{  date('M/d/Y', strtotime($item->created_at)) }}</td>
+                                    <td>{{  date('M/d/Y', strtotime($item->event_date)) }}</td>
                                     <td>
                                       @btnUpdate(['href' => route('schoolevent.edit' , [$item->id])]) @endbtnUpdate
                                     </td>

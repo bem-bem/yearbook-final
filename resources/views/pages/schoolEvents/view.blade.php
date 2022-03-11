@@ -23,7 +23,7 @@
             <div class="card shadow text-dark">
               <div class="card-body">
                 <h5 class="card-title fw-bold">{{ $item->title }}</h5>
-                <p class="text-muted">{{ $item->created_at }}</p>
+                <p class="text-muted">{{ date('M/d/Y', strtotime($item->event_date)) }}</p>
               </div>
             </div>
            </a>

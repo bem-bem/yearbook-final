@@ -8,13 +8,13 @@
         @endif
     </div>
 
-  {{-- <div class="mb-3">
+  <div class="mb-3">
     <label for="event_date" class="form-label">Date</label>
       <input type="date" name="event_date" class="form-control {{ $errors->has('event_date') ? 'is-invalid':'' }}" id="event_date">
     @if ($errors->has('event_date'))
       <span class="invalid-feedback">{{ $errors->first('event_date') }}</span>
       @endif
-  </div> --}}
+  </div>
 
     <div class="mb-3">
       <label for="image" class="form-label">Image's</label>

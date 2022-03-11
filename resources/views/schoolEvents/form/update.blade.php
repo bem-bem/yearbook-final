@@ -61,7 +61,7 @@
                   {{-- heading to all images --}}
                   <div class="row">
                     <div class="heading-line"></div>
-                    <p class="text-center mb-5">{{ date('M/d/Y', strtotime($schoolevent->created_at)) }}</p>
+                    <p class="text-center mb-5">{{ date('M/d/Y', strtotime($schoolevent->event_date)) }}</p>
                   </div>
 
                   {{-- images --}}

@@ -6,7 +6,8 @@
       <div class="col-lg-12">
         <h5 class="display-6 fw-bold text-center">{{ $schoolevent->title }}</h5>
       </div>
-      <div class="heading-line"></div>
+      <div class="heading-line "></div>
+        <p class="mb-3 text-center">{{ date('M/d/Y', strtotime($schoolevent->event_date)) }}</p>
     </div>
 
     {{-- images --}}

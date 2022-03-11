@@ -25,6 +25,7 @@ class schooleventRequest extends FormRequest
     {
         return [
             'title' => 'bail|required',
+            'event_date' => 'bail|required',
             'image' => 'bail|required'
         ];
     }
