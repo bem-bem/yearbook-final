@@ -4,12 +4,12 @@
       {{-- heading to all images --}}
       <div class="row justify-content-end">
         <div class="col-lg-4">
-          <form action="{{ route('faculty_name') }}" method="get">
+          <form action="{{ route('facultys') }}" method="get">
             @include('pages._search')
           </form>
         </div>
         <div class="heading-line"></div>
-        <p class="text-center display-5 fw-bold">Facultys</p>
+        <p class="text-center display-5 fw-bold">Faculty & Staff</p>
       </div>
 
       {{-- images --}}

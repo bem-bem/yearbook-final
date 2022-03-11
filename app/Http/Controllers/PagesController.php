@@ -17,7 +17,21 @@ class PagesController extends Controller
 
     public function students()
     {
-        return view('pages.students.view' , ['data' => student::simplePaginate(10)]);
+        if (isset($_GET['name'])) {
+            $data = student::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
+                 return view('pages.students.view', ['data' => $data]);
+        }elseif (isset($_GET['section'])) {
+            $data = student::where('section', 'LIKE', '%' . $_GET['section'] . '%')->simplePaginate(3);
+                return view('pages.students.view', ['data' => $data]);
+        }elseif (isset($_GET['course'])) {
+            $data = student::where('course', 'LIKE', '%' . $_GET['course'] . '%')->simplePaginate(3);
+                return view('pages.students.view', ['data' => $data]);
+        }elseif (isset($_GET['yearlevel'])) {
+            $data = student::where('yearlevel', 'LIKE', '%' . $_GET['yearlevel'] . '%')->simplePaginate(3);
+                return view('pages.students.view', ['data' => $data]);
+        }else{
+            return view('pages.students.view', ['data' => student::simplePaginate(10)]);
+        }
     }
 
     public function select_student($id)
@@ -28,6 +42,10 @@ class PagesController extends Controller
 
     public function facultys()
     {
+        if (isset($_GET['name'])) {
+            $data = faculty::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
+                 return view('pages.faculty.view', ['data' => $data]);
+        }
         return view('pages.faculty.view' , ['data' => faculty::simplePaginate(10)]);
     }
 
@@ -39,12 +57,9 @@ class PagesController extends Controller
 
     public function classphotos()
     {
-        if (isset($_GET['name'])) {
-            $data = classphoto::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
-                 return view('pages.classPhoto.view', ['data' => $data]);
-        }elseif (isset($_GET['section'])) {
+        if (isset($_GET['section'])) {
             $data = classphoto::where('section', 'LIKE', '%' . $_GET['section'] . '%')->simplePaginate(3);
-                return view('pages.classPhoto.view', ['data' => $data]);
+                 return view('pages.classPhoto.view', ['data' => $data]);
         }elseif (isset($_GET['course'])) {
             $data = classphoto::where('course', 'LIKE', '%' . $_GET['course'] . '%')->simplePaginate(3);
                 return view('pages.classPhoto.view', ['data' => $data]);
@@ -54,8 +69,6 @@ class PagesController extends Controller
         }else{
             return view('pages.classPhoto.view', ['data' => classphoto::simplePaginate(10)]);
         }
-        
-        // return view('pages.classPhoto.view' , ['data' => classphoto::simplePaginate(10)]);
     }
 
     public function select_classphoto($id)
@@ -66,6 +79,10 @@ class PagesController extends Controller
 
     public function schoolevents ()
     {
+        if (isset($_GET['title'])) {
+            $data = schoolevent::where('title', 'LIKE', '%' . $_GET['title'] . '%')->simplePaginate(3);
+                 return view('pages.schoolEvents.view', ['data' => $data]);
+        }
         return view('pages.schoolEvents.view' , ['data' => schoolevent::simplePaginate(10)]);
     }
 

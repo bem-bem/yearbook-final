@@ -29,7 +29,9 @@
                           @csrf
                           <table class="table table-borderless table-hover">
                             <caption>{{ $student->links() }}</caption>
-                            <button type="submit" class="btn btn-danger mb-2">Delete selected item</button>
+                            <div class="mb-2">
+                              @btnDelete() &nbsp; DELETE ALL SELECTED @endbtnDelete()
+                            </div>
                             <thead class="table-primary">
                               <tr>
                                 <th scope="col">

@@ -4,9 +4,9 @@
       {{-- heading to all images --}}
       <div class="row justify-content-end">
         <div class="col-lg-4">
-          <form action="" method="get">
+          <form action="{{ route('schoolevents') }}" method="get">
             <div class="input-group mb-3">
-              <input type="search" name="search" class="form-control" placeholder="Search title..." required>
+              <input type="search" name="title" class="form-control" placeholder="Search title..." required>
               @btnSearch() @endbtnSearch
             </div>
           </form>

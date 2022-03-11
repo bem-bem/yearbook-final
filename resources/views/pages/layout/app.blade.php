@@ -8,9 +8,10 @@
     <meta name="author" content="Dionmar Lariosa" />
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap5.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
 </head>
-<body>
+<body id="font_poppins">
     @include('pages.layout.includes.navbar')
     <div class="container mt-5 pt-5 mb-5">
       @yield('contents')

@@ -8,7 +8,12 @@
 
   <div class="col-lg-4">
     <div class="mb-3">
-      <label for="file-ip-1" class="form-label">Image</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="has_image" value="check" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Check this if the image is not required
+        </label>
+      </div>
       <input type="file" name="image" class="form-control {{ $errors->has('image') ? 'is-invalid':'' }}" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
       @if ($errors->has('image'))
         <span class="invalid-feedback">{{ $errors->first('image') }}</span>

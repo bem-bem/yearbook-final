@@ -235,6 +235,10 @@
   background-color: #65acf3;
 }
 
+#font_poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
 .heading-line::before {
   content: "";
   width: 100%;

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->date('birthday');
             $table->text('goal');
             $table->text('motto');
-            $table->text('awards');
+            $table->text('awards')->nullable();
         });
     }
 

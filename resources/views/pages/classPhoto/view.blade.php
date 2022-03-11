@@ -3,7 +3,7 @@
 @section('contents')
       {{-- heading to all images --}}
       <div class="row justify-content-end">
-        <div class="col-lg-4">
+        <div class="col-lg-5">
           @include('pages.classPhoto._filter')
         </div>
         <div class="heading-line"></div>
@@ -13,7 +13,7 @@
       {{-- images --}}
       <div class="row">
         @forelse ($data as $item)
-            <div class="col-lg-3 mb-4">
+          <div class="col-lg-3 mb-3">
            <a class="text-decoration-none" href="{{ route('select_classphoto', [$item->id]) }}">
             <div class="card shadow ">
               <div class="card-body">

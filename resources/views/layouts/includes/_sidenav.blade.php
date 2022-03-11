@@ -31,7 +31,7 @@
           <div class="collapse" id="album" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav fs-6">
                 <a href="{{ route('student.index') }}" class="nav-link">Students</a>
-                <a href="{{ route('faculty.index') }}" class="nav-link">Facultys</a>
+                <a href="{{ route('faculty.index') }}" class="nav-link">Faculty</a>
               </nav>
           </div>
         
@@ -42,7 +42,7 @@
         </a>
 
         <a href="{{ route('schoolevent.index') }}" class="nav-link">
-            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i></div>
+            <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-check fa-lg"></i></div>
             School events
         </a>
          

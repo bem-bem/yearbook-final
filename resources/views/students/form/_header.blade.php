@@ -5,7 +5,7 @@
   <div class="col-md-4 mb-4">
     <form action="{{ route('student.index') }}" method="get">
     <div class="input-group">
-        <input type="search" name="search" class="form-control" placeholder="Search name.." required>
+        <input type="search" name="name" class="form-control" placeholder="Search name.." required>
         @btnSearch() @endbtnSearch
     </div>
     </form>

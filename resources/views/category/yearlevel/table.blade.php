@@ -20,7 +20,7 @@
                       <div class="card-body">
                         <div class="row justify-content-between">
                           <div class="col-lg-6">
-                            <h4 class="fs-5 fw-bold"> @btnCreate(['href' => route('yearlevel.create')]) @endbtnCreate Yearlevels Table</h4>
+                            <h4 class="fs-5 fw-bold"> @btnCreate(['href' => route('yearlevel.create')]) @endbtnCreate Yearlevel's Table</h4>
                           </div>
                         </div>
                       </div>

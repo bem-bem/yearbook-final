@@ -57,11 +57,4 @@ Route::prefix('page')->controller(LoginController::class)->group(function () {
     Route::get('schoolevents', [PagesController::class, 'schoolevents'])->name('schoolevents');
     Route::get('schoolevents/{id}', [PagesController::class, 'select_schoolevent'])->name('select_schoolevent');
 
-    Route::get('student_name', [Search::class, 'student_name'])->name('student_name');
-    Route::get('faculty_name', [Search::class, 'faculty_name'])->name('faculty_name');
-
-    Route::get('section', [Search::class, 'section'])->name('section');
-    Route::get('course', [Search::class, 'course'])->name('course');
-    Route::get('yearlevel', [Search::class, 'yearlevel'])->name('yearlevel');
-
 });

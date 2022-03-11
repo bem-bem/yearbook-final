@@ -12,13 +12,15 @@
     {{-- images --}}
     <div class="row">
       @forelse ($schoolevent->schoolEventImages as $item)
-      <s class="col-lg-6">
+      <div class="col-lg-6 mb-3">
+       <a href="{{ asset('storage/' . $item->image) }}">
         <div class="card shadow">
           <div class="card-body">
             @img(['src' => $item->image]) @endimg
           </div>
         </div>
-      </s>
+       </a>
+      </div>
       @empty
           
       @endforelse

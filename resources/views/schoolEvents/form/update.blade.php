@@ -39,7 +39,7 @@
                       <span class="invalid-feedback">{{ $errors->first('title') }}</span>
                       @endif
                       </div>
-                      <button class="btn btn-sm btn-primary">submit</button>
+                      <button class="btn btn-sm btn-primary">Save Changes</button>
                      </form>
                     </div>
 
@@ -53,7 +53,7 @@
                       <span class="invalid-feedback">{{ $errors->first('image') }}</span>
                       @endif
                       </div>
-                      <button class="btn btn-sm btn-primary">submit</button>
+                      <button class="btn btn-sm btn-primary">Upload</button>
                      </form>
                     </div>
                   </div>

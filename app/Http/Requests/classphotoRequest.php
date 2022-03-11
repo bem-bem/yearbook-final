@@ -24,7 +24,7 @@ class classphotoRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'bail|required|image',
+            'image' => 'bail|image|required_unless:has_image,check',
             'section' => 'bail|required',
             'yearlevel' => 'bail|required',
             'course' => 'bail|required',

@@ -19,9 +19,7 @@
                   <h5 class="display-5">{{ $student->name }}</h5>
                   <article class="px-3">
                     <p>{{ $student->birthday }}</p>
-                    <p>{{ $student->yearlevel }}</p>
-                    <p>{{ $student->course_strand }}</p>
-                    <p>{{ $student->section_block }}</p>
+                    <p>{{ $student->yearlevel }} {{ $student->section }} {{ $student->course }}</p>
                     <p>{{ $student->schoolyear }}</p>
                   </article>
                     <div class="accordion accordion-flush" id="accordionFlushExample">

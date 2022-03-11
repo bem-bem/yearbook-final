@@ -1,1 +1,1 @@
-<button type="submit" class="btn btn-danger"><i class="fa-solid fa-user-minus"></i></button>
+<button onclick="return confirm('Are you sure you want to delete this item?');" type="submit" class="btn btn-danger"><i class="fa-solid fa-user-minus"></i> {{ $slot }}</button>

@@ -20,7 +20,7 @@
                       @csrf
                       @method('PUT')
                       @include('category.section._form')
-                      <button type="submit" class="btn btn-primary w-100">Save Change's</button>
+                      <button type="submit" class="btn btn-primary w-100">Save Changes</button>
                     </form>
                   </div>
                 </div>

@@ -75,13 +75,13 @@ class StudentController extends Controller
         return redirect()->route('student.index')->withSuccessMessage($this->updated);
     }
 
-    public function destroy(student $student)
-    {
-        $path =  public_path("storage\\" . $student->image);
-        if (File::exists($path)) {
-            File::delete($path);
-        }
-        $student->delete();
-        return back()->withSuccessMessage($this->deleted);
-    }
+    // public function destroy(student $student)
+    // {
+    //     $path =  public_path("storage\\" . $student->image);
+    //     if (File::exists($path)) {
+    //         File::delete($path);
+    //     }
+    //     $student->delete();
+    //     return back()->withSuccessMessage($this->deleted);
+    // }
 }

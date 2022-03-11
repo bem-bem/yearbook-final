@@ -22,7 +22,7 @@ class DeleteAllController extends Controller
                 $result = student::whereIn('id' , $s_id)->delete();
             }
             if ($result) {
-                return redirect()->back()->with('success', 'success');
+                return back()->withSuccessMessage($this->deleted);
             } else {
                 return redirect()->back()->with('error', 'error');
             }
@@ -44,7 +44,7 @@ class DeleteAllController extends Controller
                 $result = faculty::whereIn('id' , $s_id)->delete();
             }
             if ($result) {
-                return redirect()->back()->with('success', 'success');
+                return back()->withSuccessMessage($this->deleted);
             } else {
                 return redirect()->back()->with('error', 'error');
             }

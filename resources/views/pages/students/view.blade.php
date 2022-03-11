@@ -5,7 +5,7 @@
       <div class="row justify-content-between">
         <div class="col-lg-8">@include('pages.students._filter')</div>
         <div class="col-lg-4">
-          <form action="{{ route('student_name') }}" method="get">
+          <form action="{{ route('students') }}" method="get">
             @include('pages._search')
           </form>
         </div>
