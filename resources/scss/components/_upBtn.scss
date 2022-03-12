@@ -7,8 +7,7 @@
   right: 1.875rem;
   bottom: 1.875rem;
   z-index: 9999;
-  // use 0 on opacity piro error paman still working on this
-  opacity: 1;
+  opacity: 0;
 
   i {
       color: $white;
@@ -19,7 +18,7 @@
       transform: translate(-50%, -50%);
   }
 }
-.back-to-top.active {
+.back-to-top.active{
   bottom: 32px;
   pointer-events: auto;
   opacity: 1;

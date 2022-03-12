@@ -18,7 +18,9 @@
           <div class="col-lg-6 mb-3">
            <a class="text-decoration-none" href="{{ asset('storage/' . $item->image) }}">
             <div class="card shadow">
-              @img(['src' => $item->image]) @endimg
+              <div class="mt-3">
+                @img(['src' => $item->image]) @endimg
+              </div>
               <div class="card-body text-center text-dark">
                 <h5 class="card-title fw-bold"> {{ $item->schoolyear }}</h5>
               </div>

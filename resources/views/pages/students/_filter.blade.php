@@ -1,6 +1,5 @@
 
-<div class="mb-3">
-<div class="btn-group">
+<div class="btn-group mb-3">
   <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     section / block
   </button>
@@ -18,7 +17,7 @@
   </ul>
 </div>
 
-<div class="btn-group">
+<div class="btn-group mb-3">
   <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     course / strand
   </button>
@@ -36,7 +35,7 @@
   </ul>
 </div>
 
-<div class="btn-group">
+<div class="btn-group mb-3">
   <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     yearlevel
   </button>
@@ -52,5 +51,4 @@
         
     @endforelse
   </ul>
-</div>
 </div>

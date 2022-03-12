@@ -39,7 +39,7 @@
                             </thead>
                             <tbody>
                               @forelse ($classphoto as $item)
-                                  <tr>
+                                  <tr @if ($loop->first) class="bg-secondary fw-bolder shadow text-dark" @endif>
                                     <td>{{ $item->section }}</td>
                                     <td>{{ $item->course }}</td>
                                     <td>{{ $item->yearlevel }}</td>

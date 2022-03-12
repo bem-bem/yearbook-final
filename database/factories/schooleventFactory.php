@@ -18,6 +18,7 @@ class schooleventFactory extends Factory
     {
         return [
             'title' => $this->faker->name(),
+            'event_date' => $this->faker->date(),
         ];
     }
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-primary fixed-top shadow">
+<nav class="navbar navbar-dark bg-primary fixed-top header shadow">
   <div class="container">
     <a class="navbar-brand" href="#"><img src="{{ asset('image/cctc_logo.png') }}" width="40">&nbsp;Web-based yearbook</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

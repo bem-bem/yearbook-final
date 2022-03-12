@@ -28,7 +28,7 @@
         </div>
       </div>
       @empty
-          
+          @include('_noRecord')
       @endforelse
     </div>
 

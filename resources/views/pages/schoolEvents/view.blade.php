@@ -22,7 +22,7 @@
         @forelse ($data as $item)
           <div class="col-lg-3 mb-3">
           <a class="text-decoration-none" href="{{ route('select_schoolevent' , [$item->id]) }}">
-            <div class="card shadow text-dark">
+            <div class="card shadow text-dark text-center">
               <div class="card-body">
                 <h5 class="card-title fw-bold text-uppercase">{{ $item->title }}</h5>
                 <p class="text-muted">{{ date('M/d/Y', strtotime($item->event_date)) }}</p>

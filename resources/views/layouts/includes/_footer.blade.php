@@ -8,5 +8,5 @@
 
 <!-- BACK TO TOP BUTTON  -->
 <a href="#" class="shadow btn btn-primary rounded-circle back-to-top">
-    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-chevron-up fa-lg"></i>
   </a>

@@ -40,7 +40,7 @@
                             </thead>
                             <tbody>
                               @forelse ($data as $item)
-                                  <tr>
+                                  <tr @if ($loop->first) class="bg-secondary fw-bolder shadow text-dark" @endif>
                                     <td>{{ $item->name }}</td>
                                     <td>
                                       @btnUpdate(['href' => route('yearlevel.edit' , [$item->id])]) @endbtnUpdate

@@ -50,7 +50,7 @@
                               </thead>
                               <tbody>
                                 @forelse ($faculty as $item)
-                                    <tr>
+                                    <tr @if ($loop->first) class="bg-secondary fw-bolder shadow text-dark" @endif>
                                       <td>
                                         <div>
                                           <input class="form-check-input" name="ids[]" type="checkbox" id="checkboxNoLabel" value="{{ $item->id }}">

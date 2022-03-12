@@ -32,7 +32,7 @@
                             <div class="mb-2">
                               @btnDelete() &nbsp; DELETE ALL SELECTED @endbtnDelete()
                             </div>
-                            <thead class="table-primary">
+                            <thead class="table-primary shadow">
                               <tr>
                                 <th scope="col">
                                   <div class="form-check">
@@ -50,7 +50,7 @@
                             </thead>
                             <tbody>
                               @forelse ($student as $item)
-                                  <tr>
+                                  <tr @if ($loop->first) class="bg-secondary fw-bolder shadow text-dark" @endif>
                                     <td>
                                       <div>
                                         <input class="form-check-input" name="ids[]" type="checkbox" id="checkboxNoLabel" value="{{ $item->id }}">

@@ -36,7 +36,7 @@
                             </thead>
                             <tbody>
                               @forelse ($schoolevent as $item)
-                                  <tr>
+                                  <tr @if ($loop->first) class="bg-secondary fw-bolder shadow text-dark" @endif>
                                     <td>{{ $item->title }}</td>
                                     <td>{{  date('M/d/Y', strtotime($item->event_date)) }}</td>
                                     <td>
