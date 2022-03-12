@@ -1,4 +1,5 @@
-@use 'variables' as *;
+@use 'customizer'as *;
+
 #layoutAuthentication {
   display: flex;
   flex-direction: column;
@@ -230,8 +231,8 @@
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
   color: #fff;
-} 
+}
 
 .sb-sidenav-dark .sb-sidenav-footer {
   background-color: #65acf3;
-} 
+}

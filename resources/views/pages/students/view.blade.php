@@ -1,5 +1,7 @@
 @extends('pages.layout.app')
 
+@section('title' , 'Student')
+
 @section('contents')
       {{-- heading to all images --}}
       <div class="row justify-content-between">
@@ -21,14 +23,16 @@
             <div class="card shadow text-dark">
               <div class="card-body">
                 @img(['src' => $item->image]) @endimg
-                <h5 class="card-title fw-bold">{{ $item->name }}</h5>
-                <p class="text-muted">{{ $item->schoolyear }}</p>
+                <h5 class="card-title fw-bold text-capitalize mt-2 text-center">{{ $item->name }}</h5>
+              </div>
+              <div class="card-footer text-muted text-end">
+                {{ $item->schoolyear }}
               </div>
             </div>
            </a>
         </div>
         @empty
-            
+            @include('_noRecord')
         @endforelse
       </div>
 

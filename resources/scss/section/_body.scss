@@ -1,4 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
 
 #font_poppins {
-  font-family: 'Poppins', sans-serif!important;
+  font-family: 'Poppins', sans-serif !important;
 }

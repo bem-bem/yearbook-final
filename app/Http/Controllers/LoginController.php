@@ -27,12 +27,12 @@ class LoginController extends Controller
             //check password
             if ($adminPassword) {
                 $request->session()->put('loggedAdmin', $adminUsername->id);
-                return redirect()->route('dashboard')->withSuccess('Welcome Admin');
+                return redirect()->route('dashboard')->withSuccessMessage('Welcome Admin');
             } else {
-                return back()->witherror('in correct password!');
+                return back()->with('error' , 'Incorrect password');
             }
         } else {
-            return back()->withErrorMessage('Anthorize access!');
+            return back()->with('error' , 'Invalid account');
         }
     }
 

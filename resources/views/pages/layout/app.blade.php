@@ -7,6 +7,7 @@
     <meta name="description" content="cctc web base yearbook" />
     <meta name="author" content="Dionmar Lariosa" />
     <title>@yield('title')</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('image/cctc_logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
@@ -16,6 +17,7 @@
     <div class="container mt-5 pt-5 mb-5">
       @yield('contents')
     </div>
+    
     @include('layouts.includes._footer')
   <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
   <script src="{{ asset('js/my.js') }}" defer></script>

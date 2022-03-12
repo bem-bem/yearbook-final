@@ -27,8 +27,8 @@ class facultyRequest extends FormRequest
             'name' => 'bail|required|max:40',
             'image' => 'bail|image|required_unless:has_image,check',
             'job' => 'bail|required|max:20',
-            'job_description' => 'bail|max:50|nullable',
-            'schoolyear' => 'bail|required'
+            'job_description' => 'max:50|nullable',
+            'schoolyear' => 'bail|required|max:9'
         ];
     }
 }

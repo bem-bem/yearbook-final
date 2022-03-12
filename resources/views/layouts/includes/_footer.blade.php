@@ -1,17 +1,12 @@
-<footer class="py-4 bg-light mt-auto ">
+<footer class="py-4 bg-light mt-auto sticky_footer">
   <div class="container-fluid px-4">
-      <div class="d-flex align-items-center justify-content-end small">
-          <div class="text-muted">Copyright &copy; CCTC website {{ date('Y') }}</div>
-          {{-- <div>
-              <a href="#">Privacy Policy</a>
-              &middot;
-              <a href="#">Terms &amp; Conditions</a>
-          </div> --}}
+      <div class="d-flex align-items-center justify-content-center small">
+          <div class="text-muted">Copyright &copy; CCTC yearbook website {{ date('Y') }}</div>
       </div>
   </div>
 </footer>
 
 <!-- BACK TO TOP BUTTON  -->
-{{-- <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+<a href="#" class="shadow btn btn-primary rounded-circle back-to-top">
     <i class="fas fa-chevron-up"></i>
-  </a> --}}
+  </a>

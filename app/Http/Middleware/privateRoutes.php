@@ -18,7 +18,7 @@ class privateRoutes
     {
          //if session and request login doesn't exists dont allaw any request  to access protected pages
          if (!session()->has('loggedAdmin') && ($request->path() != route('login_check'))) {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error' , 'Admin  acces only!');
             }
 
         return $next($request)->header('Cache-Control', 'no-cache, no-store, max-age=0, ,must-revalidate')

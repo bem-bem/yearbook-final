@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'schoolevents')
+@section('title' , 'School Events')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -44,7 +44,7 @@
                                     </td>
                                   </tr>
                               @empty
-                                  
+                              @include('_noRecord')
                               @endforelse
                             </tbody>
                           </table>

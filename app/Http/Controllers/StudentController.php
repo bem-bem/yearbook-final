@@ -16,6 +16,7 @@ class StudentController extends Controller
     public function index()
     {
         $this->alert();
+        $this->alert_danger();
         if (isset($_GET['name'])) {
             $student = $this->modelName::where('name', 'LIKE', '%' . $_GET['name'] . '%')->simplePaginate(3);
                  return view('students.table', ['student' => $student]);

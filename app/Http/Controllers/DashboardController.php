@@ -15,6 +15,7 @@ class DashboardController extends Controller
 {
     public function __invoke()
     {
+        $this->alert();
         return view('dashboard' ,
         [ 
             'classphoto' =>  classphoto::count(),

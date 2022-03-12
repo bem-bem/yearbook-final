@@ -25,10 +25,10 @@ class classphotoRequest extends FormRequest
     {
         return [
             'image' => 'bail|image|required_unless:has_image,check',
-            'section' => 'bail|required',
-            'yearlevel' => 'bail|required',
-            'course' => 'bail|required',
-            'schoolyear' => 'bail|required|digits:9',
+            'section' => 'required',
+            'yearlevel' => 'required',
+            'course' => 'nullable',
+            'schoolyear' => 'bail|required|max:9',
         ];
     }
 }

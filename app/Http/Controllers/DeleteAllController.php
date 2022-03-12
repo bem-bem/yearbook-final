@@ -19,15 +19,11 @@ class DeleteAllController extends Controller
                 if (File::exists($path)) {
                     File::delete($path);
                 }
-                $result = student::whereIn('id' , $s_id)->delete();
+                student::whereIn('id', $s_id)->delete();
             }
-            if ($result) {
-                return back()->withSuccessMessage($this->deleted);
-            } else {
-                return redirect()->back()->with('error', 'error');
-            }
+            return back()->withSuccessMessage($this->deleted);
         } else {
-            return redirect()->back()->with('error', 'error');
+            return back()->with('danger', 'Please select atleast one record');
         }
     }
 
@@ -41,15 +37,11 @@ class DeleteAllController extends Controller
                 if (File::exists($path)) {
                     File::delete($path);
                 }
-                $result = faculty::whereIn('id' , $s_id)->delete();
+                faculty::whereIn('id', $s_id)->delete();
             }
-            if ($result) {
-                return back()->withSuccessMessage($this->deleted);
-            } else {
-                return redirect()->back()->with('error', 'error');
-            }
+            return back()->withSuccessMessage($this->deleted);
         } else {
-            return redirect()->back()->with('error', 'error');
+            return back()->with('danger', 'Please select atleast one record');
         }
     }
 }

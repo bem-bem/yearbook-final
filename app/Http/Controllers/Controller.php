@@ -20,11 +20,15 @@ class Controller extends BaseController
     {
         if (session('success_message')) {
             Alert::success('SUCCESS', session('success_message'));
-        }elseif (session()->has($this->info)) {
-            alert()->info(session()->get($this->info , $this->info));
         }
-        // if (session()->has($this->info)) {
-        //     Alert::toast(session()->get($this->info), $this->info);
+        return;
+    }
+
+    public function alert_danger()
+    {
+        if (session('danger')) {
+            Alert::error('ERROR', session('danger'));
+        }
         return;
     }
 

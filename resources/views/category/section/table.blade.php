@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Sections')
+@section('title' , 'Section / Block')
     
 @section('contents')
 @include('layouts.includes._topnav')
@@ -54,7 +54,7 @@
                                     </td>
                                   </tr>
                               @empty
-                                  
+                              @include('_noRecord')
                               @endforelse
                             </tbody>
                           </table>

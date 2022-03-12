@@ -14,6 +14,12 @@
             width="200px" alt="profile">
         </div>
 
+        @if (session()->has('error'))
+        <div class="alert alert-danger" role="alert">
+          {{ session()->get('error') }}
+        </div>
+        @endif
+
         <div class="mb-3">
           <input type="text" name="username" value="{{ old('username') }}" class="form-control {{ $errors->has('username') ? 'is-invalid':'' }}" placeholder="User Name">
           @if ($errors->has('username'))

@@ -1,71 +1,44 @@
 @extends('pages.layout.app')
 
+@section('title' , $student->name)
+
 @section('contents')
-<div class="row ">
-
-  <div class="col-12">
-  <div class="card shadow">
-       @cssWave() @endcssWave
-   <div class="card-body">
-          
-          {{-- nested row --}}
-          <div class="row">
-
-            <div class="col-md-6">
-              @img(['src' => $student->image]) @endimg
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card shadow mb-3">
+        <div class="row g-0">
+          <div class="col-md-4 {{ empty($student->image) ? 'mt-5' : '' }}">
+            @img(['src' => $student->image]) @endimg
+            <div class="card-img-overlay">
+              <h5 class="card-title">
+                <a href="{{ empty($student->image) ? '#' : route('student_img' , [$student->id])  }}" class="btn btn-outline-light"><i class="fa-solid fa-download"></i></a>
+              </h5>
             </div>
-
-            <div class="col-md-6 text-end">
-                  <h5 class="display-5">{{ $student->name }}</h5>
-                  <article class="px-3">
-                    <p>{{ $student->birthday }}</p>
-                    <p>{{ $student->yearlevel }} {{ $student->section }} {{ $student->course }}</p>
-                    <p>{{ $student->schoolyear }}</p>
-                  </article>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                      <div class="accordion-item shadow mb-3">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Goal
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">{{ $student->goal }}</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item shadow mb-3">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Motto
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">{{ $student->motto }}</div>
-                        </div>
-                      </div>
-
-                      @if (!empty($student->awards))
-                      <div class="accordion-item shadow mb-3">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Awards
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">{{ $student->awards }}</div>
-                        </div>
-                      </div>
-                      @endif
-                    </div>
-            </div>
-        
           </div>
-          {{-- nested row --}}
-
+          <div class="col-md-8">
+            <div class="card-body text-capitalize">
+              <h5 class="card-title fw-bolder display-5">{{ $student->name }}</h5>
+              <small class="text-muted">{{ date('M/d/Y', strtotime($student->birthday)) }}</small>
+              <p class="card-text">{{ $student->yearlevel }} : {{ $student->course }} {{ $student->section }} <br> {{ $student->awards }} </p>
+                <div class="row justify-content-between">
+                  <div class="col">
+                    <article>
+                      <h5 class="fs-5 fw-bold">Goal</h5>
+                      <p>{{ $student->goal }}</p>
+                    </article>
+                  </div>
+                  <div class="col">
+                    <article>
+                      <h5 class="fs-5 fw-bold">Motto</h5>
+                      <p>{{ $student->motto }}</p>
+                    </article>
+                  </div>
+                </div>
+              <p class="card-text"><small class="text-muted">{{ $student->schoolyear }}</small></p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </div>
-
-</div>
-
 @endsection

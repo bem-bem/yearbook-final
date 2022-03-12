@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-primary fixed-top shadow">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="{{ asset('image/cctc_logo.png') }}" width="40">&nbsp; CCTC Web-based yearbook</a>
+    <a class="navbar-brand" href="#"><img src="{{ asset('image/cctc_logo.png') }}" width="40">&nbsp;Web-based yearbook</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,11 +28,10 @@
               <li><a class="dropdown-item" href="{{ route('students') }}">Students</a></li>
               <li><a class="dropdown-item" href="{{ route('facultys') }}">Facultys</a></li>
               <li><a class="dropdown-item" href="{{ route('classphotos') }}">Class photo</a></li>
-              <li><a class="dropdown-item" href="{{ route('schoolevents') }}">School events</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="{{ route('schoolevents') }}">School events</a></li>
             </ul>
           </li>
         </ul>

@@ -1,5 +1,7 @@
 @extends('pages.layout.app')
 
+@section('title' , 'School Events')
+
 @section('contents')
       {{-- heading to all images --}}
       <div class="row justify-content-end">
@@ -22,14 +24,14 @@
           <a class="text-decoration-none" href="{{ route('select_schoolevent' , [$item->id]) }}">
             <div class="card shadow text-dark">
               <div class="card-body">
-                <h5 class="card-title fw-bold">{{ $item->title }}</h5>
+                <h5 class="card-title fw-bold text-uppercase">{{ $item->title }}</h5>
                 <p class="text-muted">{{ date('M/d/Y', strtotime($item->event_date)) }}</p>
               </div>
             </div>
            </a>
         </div>
         @empty
-            
+        @include('_noRecord')
         @endforelse
       </div>
 

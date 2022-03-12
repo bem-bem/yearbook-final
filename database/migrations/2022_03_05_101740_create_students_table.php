@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('section');
             $table->string('yearlevel');
-            $table->string('course');
+            $table->string('course')->nullable();
             $table->string('schoolyear');
-            $table->date('birthday');
-            $table->text('goal');
-            $table->text('motto');
+            $table->date('birthday')->nullable();
+            $table->text('goal')->nullable();
+            $table->text('motto')->nullable();
             $table->text('awards')->nullable();
         });
     }

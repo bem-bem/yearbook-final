@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title' , 'Create')
+@section('title' , 'Students')
     
 @section('contents')
 @include('layouts.includes._topnav')

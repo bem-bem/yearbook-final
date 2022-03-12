@@ -71,12 +71,6 @@ class PagesController extends Controller
         }
     }
 
-    public function select_classphoto($id)
-    {
-        $classphoto = classphoto::findOrFail($id);
-        return view('pages.classphoto.select_classphoto' , compact('classphoto'));
-    }
-
     public function schoolevents ()
     {
         if (isset($_GET['title'])) {

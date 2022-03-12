@@ -26,13 +26,13 @@ class studentRequest extends FormRequest
         return [
             'name' => 'bail|required|max:40',
             'image' => 'bail|image|required_unless:has_image,check',
-            'section' => 'bail|required',
-            'yearlevel' => 'bail|required',
-            'course' => 'bail|required',
-            'schoolyear' => 'bail|required',
-            'birthday' => 'bail|required',
-            'goal' => 'bail|required|max:100',
-            'motto' => 'bail|required|max:100',
+            'section' => 'required',
+            'yearlevel' => 'required',
+            'course' => 'nullable',
+            'schoolyear' => 'bail|required|max:9',
+            'birthday' => 'nullable',
+            'goal' => 'nullable|max:150',
+            'motto' => 'nullable|max:150',
             'awards' => 'nullable|max:100',
         ];
     }

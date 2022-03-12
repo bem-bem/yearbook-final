@@ -24,9 +24,9 @@ class schooleventRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'bail|required',
-            'event_date' => 'bail|required',
-            'image' => 'bail|required'
+            'title' => 'bail|required|max:50',
+            'event_date' => 'required',
+            'image' => 'required',
         ];
     }
 }

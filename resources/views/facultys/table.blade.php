@@ -64,7 +64,7 @@
                                       </td>
                                     </tr>
                                 @empty
-                                    
+                                @include('_noRecord')
                                 @endforelse
                               </tbody>
                             </table>
