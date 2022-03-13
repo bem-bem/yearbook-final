@@ -16,7 +16,7 @@
       <div class="row">
         @forelse ($data as $item)
           <div class="col-lg-6 mb-3">
-           <a class="text-decoration-none" href="{{ asset('storage/' . $item->image) }}">
+           <a class="text-decoration-none" href="{{  empty($item->image) ? '#' :  asset('storage/' . $item->image) }}">
             <div class="card shadow">
               <div class="mt-3">
                 @img(['src' => $item->image]) @endimg

@@ -65,14 +65,4 @@ class FacultyController extends Controller
         }
         return redirect()->route('faculty.index')->withSuccessMessage($this->updated);
     }
-
-    // public function destroy(faculty $faculty)
-    // {
-    //     $path =  public_path("storage\\" . $faculty->image);
-    //     if (File::exists($path)) {
-    //         File::delete($path);
-    //     }
-    //     $faculty->delete();
-    //     return back()->withSuccessMessage($this->deleted);
-    // }
 }
