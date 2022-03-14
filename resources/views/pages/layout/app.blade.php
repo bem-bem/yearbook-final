@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
 </head>
 <body id="font_poppins">
     @include('pages.layout.includes.navbar')
-    <div class="container mt-5 pt-5 mb-5">
+
       @yield('contents')
-    </div>
     
     @include('layouts.includes._footer')
   <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>

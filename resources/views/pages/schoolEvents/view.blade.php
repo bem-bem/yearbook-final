@@ -3,7 +3,8 @@
 @section('title' , 'School Events')
 
 @section('contents')
-      {{-- heading to all images --}}
+      <div class="container mt-5 pt-5 mb-5">
+        {{-- heading to all images --}}
       <div class="row justify-content-end">
         <div class="col-lg-4">
           <form action="{{ route('schoolevents') }}" method="get">
@@ -41,4 +42,5 @@
   </div>
 </div>
 
+</div>
 @endsection

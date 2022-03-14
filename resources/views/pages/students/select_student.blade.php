@@ -3,6 +3,8 @@
 @section('title' , $student->name)
 
 @section('contents')
+<div class="container mt-5 pt-5 mb-5">
+  
   <div class="row">
     <div class="col-lg-12">
       <div class="card shadow mb-3">
@@ -41,4 +43,5 @@
       </div>
     </div>
   </div>
+</div>
 @endsection

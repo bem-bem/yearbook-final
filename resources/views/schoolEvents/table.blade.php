@@ -25,7 +25,7 @@
                       
                       <div class="card-body">
                         <div class="table-responsive">
-                          <table class="table table-borderless table-hover">
+                          <table class="table table-borderless table-hover text-capitalize">
                             <caption>{{ $schoolevent->links() }}</caption>
                             <thead class="table-primary">
                               <tr>

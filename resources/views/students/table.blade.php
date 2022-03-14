@@ -27,7 +27,7 @@
                         <div class="table-responsive">
                         <form action="{{ route('delete_student') }}" method="post">
                           @csrf
-                          <table class="table table-borderless table-hover">
+                          <table class="table table-borderless table-hover text-capitalize">
                             <caption>{{ $student->links() }}</caption>
                             <div class="mb-2">
                               @btnDelete() &nbsp; DELETE ALL SELECTED @endbtnDelete()

@@ -3,6 +3,8 @@
 @section('title' , 'Login')
     
 @section('contents')
+<div class="container mt-5 pt-5 mb-5">
+  
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <div class="card shadow">
@@ -39,5 +41,6 @@
     </div>
 
   </div>
+</div>
 </div>
 @endsection

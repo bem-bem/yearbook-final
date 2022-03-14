@@ -49,6 +49,8 @@ Route::prefix('page')->middleware('publicRoutes')->controller(LoginController::c
 
 Route::prefix('page')->middleware('publicRoutes')->controller(PagesController::class)->group(function () {
     
+    Route::get('about', 'about')->name('about');
+
     Route::get('students', 'students')->name('students');
     Route::get('students/{id}', 'select_student')->name('select_student');
 

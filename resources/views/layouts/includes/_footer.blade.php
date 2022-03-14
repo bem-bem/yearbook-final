@@ -1,7 +1,7 @@
 <footer class="py-4 bg-light mt-auto sticky_footer">
   <div class="container-fluid px-4">
       <div class="d-flex align-items-center justify-content-center small">
-          <div class="text-muted">Copyright &copy; CCTC yearbook website {{ date('Y') }}</div>
+          <div class="text-muted">&copy; Copyright A Web-based yearbook {{ date('Y') }}</div>
       </div>
   </div>
 </footer>

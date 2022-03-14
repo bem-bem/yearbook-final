@@ -3,6 +3,9 @@
 @section('title' , 'Faculty')
 
 @section('contents')
+
+<div class="container mt-5 pt-5 mb-5">
+  
       {{-- heading to all images --}}
       <div class="row justify-content-end">
         <div class="col-lg-4">
@@ -39,5 +42,6 @@
           {{ $data->links() }}
         </div>
       </div>
+</div>
 
 @endsection
