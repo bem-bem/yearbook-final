@@ -25,9 +25,9 @@ class classphotoRequest extends FormRequest
     {
         return [
             'image' => 'bail|image|required_unless:has_image,check',
-            'section' => 'required',
-            'yearlevel' => 'required',
-            'course' => 'nullable',
+            'section' => 'required|max:30',
+            'yearlevel' => 'required|max:30',
+            'course' => 'nullable|max:30',
             'schoolyear' => 'bail|required|max:9',
         ];
     }

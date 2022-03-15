@@ -26,8 +26,8 @@ class facultyRequest extends FormRequest
         return [
             'name' => 'bail|required|max:40',
             'image' => 'bail|image|required_unless:has_image,check',
-            'job' => 'bail|required|max:20',
-            'job_description' => 'max:50|nullable',
+            'job' => 'bail|required|max:40',
+            'job_description' => 'max:100|nullable',
             'schoolyear' => 'bail|required|max:9'
         ];
     }

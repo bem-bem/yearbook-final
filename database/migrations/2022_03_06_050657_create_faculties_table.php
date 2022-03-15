@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('image')->nullable();
-            $table->string('job');
-            $table->string('job_description')->nullable();
-            $table->string('schoolyear');
+            $table->string('name' , 40);
+            $table->string('image' , 10)->nullable();
+            $table->string('job' , 40);
+            $table->string('job_description' , 100)->nullable();
+            $table->string('schoolyear' , 9);
         });
     }
 

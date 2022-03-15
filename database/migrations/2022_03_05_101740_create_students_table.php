@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('image')->nullable();
-            $table->string('section');
-            $table->string('yearlevel');
-            $table->string('course')->nullable();
-            $table->string('schoolyear');
+            $table->string('name' ,40);
+            $table->string('image' , 10)->nullable();
+            $table->string('section' , 30);
+            $table->string('yearlevel' , 30);
+            $table->string('course' , 30)->nullable();
+            $table->string('schoolyear' , 9);
             $table->date('birthday')->nullable();
-            $table->text('goal')->nullable();
-            $table->text('motto')->nullable();
-            $table->text('awards')->nullable();
+            $table->text('goal' , 150)->nullable();
+            $table->text('motto' , 150)->nullable();
+            $table->text('awards' , 100)->nullable();
         });
     }
 

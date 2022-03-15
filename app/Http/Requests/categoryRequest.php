@@ -24,7 +24,7 @@ class categoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'bail|required|max:15'
+            'name' => 'bail|required|max:30'
         ];
     }
 }

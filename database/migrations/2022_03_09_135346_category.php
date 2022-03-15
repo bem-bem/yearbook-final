@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('yearlevels', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name' , 30);
         });
         Schema::create('sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name' , 30);
         });
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name' , 30);
         });
     }
 

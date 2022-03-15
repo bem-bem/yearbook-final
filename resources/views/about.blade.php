@@ -68,7 +68,7 @@
     <div class="row justify-content-center mt-5">
       <div class="col-lg-12 text-uppercase  text-center fw-bold fs-3">
         <p>General Objectives of Education of CONSOLATRIX COLLEGE OF </p>
-        <p>TOLEDO CITY, INC</p>
+        <p>TOLEDO CITY, INC.</p>
       </div>
     </div>
 

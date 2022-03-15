@@ -29,7 +29,7 @@
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
               <li><a class="dropdown-item" href="#"></a></li>
               <li><a class="dropdown-item" href="{{ route('students') }}">Students</a></li>
-              <li><a class="dropdown-item" href="{{ route('facultys') }}">Facultys</a></li>
+              <li><a class="dropdown-item" href="{{ route('facultys') }}">Faculty</a></li>
               <li><a class="dropdown-item" href="{{ route('classphotos') }}">Class photo</a></li>
               <li>
                 <hr class="dropdown-divider">
